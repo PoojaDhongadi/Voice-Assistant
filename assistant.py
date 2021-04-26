@@ -11,7 +11,6 @@ import requests
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
-# print(voices[1].id)
 engine.setProperty('voices', voices[0].id)
 
 
@@ -34,8 +33,7 @@ def wishMe():
     speak("I am Jarvis. Please tell me how may I help you")       
 
 def takeCommand():
-    #It takes microphone input from the user and returns string output
-
+    
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening...")
